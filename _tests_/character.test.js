@@ -8,4 +8,8 @@ describe('Character', () => {
     expect(newCharacter.name).toEqual("Name");
     expect(newCharacter.skills).toEqual("Skills");
 })
+  test("should return the type chosen", () => {
+    var newType = new Character ("Mage");
+    expect(newType.chooseType()).toEqual("You have chosen Mage");
+  })
 });

@@ -5,11 +5,10 @@ export class Game {
   }
 
   whereAmI() {
-    return this.character + " is in the " + this.setting;
+    return `${this.character} is in the ${this.setting}`;
   }
 
 }
-
 
 export class Character {
   constructor(type, name, skills) {
@@ -17,22 +16,40 @@ export class Character {
     this.name = name;
     this.skills = skills;
   }
+  chooseType() {
+    // return 'You have chosen ' + this.type;
+    return `You have chosen ${this.type}`
+  }
 }
 
-
 export class Skills extends Character{
-  constructor(strength, speed, kindness){
-    super(name)
-    this.strength = 0;
-    this.speed = 0;
-    this.kindness = 0;
+  constructor(name, strength, speed, kindness, energy){
+    super(name);
+    this.strength = parseInt(strength);
+    this.speed = parseInt(speed);
+    this.kindness = parseInt(kindness);
+    this.energy = energy;
   }
 
-  addStength() {
-    for (var i = 0; i < this.name.length; i++) {
-      this.stength += 1;
+  addStrength() {
+    for (var i = 0; i < this.energy.length; i++) {
+
     }
+    return this.strength + 1;
   }
 
+  addSpeed(){
+    for (var i = 0; i < this.energy.length; i++) {
+    }
+    return this.speed * 2;
+  }
+}
 
+export class Inventory extends Character {
+   constructor(name, weapons, food, medical){
+     super(name);
+     this.weapons = weapons;
+     this.food = food;
+     this.medical = medical;
+   }
 }
