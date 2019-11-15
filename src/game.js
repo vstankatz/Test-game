@@ -32,15 +32,10 @@ export class Skills extends Character{
   }
 
   addStrength() {
-    for (var i = 0; i < this.energy.length; i++) {
-
-    }
     return this.strength + 1;
   }
 
   addSpeed(){
-    for (var i = 0; i < this.energy.length; i++) {
-    }
     return this.speed * 2;
   }
 }
